@@ -80,5 +80,26 @@ $matches = [
             echo 'Accesso negato!';
         }
     ?>
+
+    <!-- PHP SNACK 3 -->
+
+    <h2>PHP Snack 3 - Random senza numeri che si ripetono</h2>
+    
+    <?php 
+
+    $numbers = [];
+    $length = 15;
+
+    while( count($numbers) < $length) {
+        $random = rand(0, 99);
+
+        if( !in_array($random, $numbers)) {
+            $numbers[] = $random;
+        }
+    }
+
+        var_dump($numbers);
+
+    ?>
 </body>
 </html>
