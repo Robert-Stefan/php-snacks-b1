@@ -7,6 +7,7 @@
     <title>Scooby-Snacks</title>
 </head>
 <body>
+
 <!-- PHP Snack 1:
 Creiamo un array 'matches' contenente altri array i quali rappresentano delle partite di basket di un’ipotetica tappa del calendario.
 Ogni array della partita avrà una squadra di casa e una squadra ospite, punti fatti dalla squadra di casa e punti fatti dalla squadra ospite.
@@ -63,5 +64,21 @@ $matches = [
         </ul>
     <?php } ?>
 
+    <!-- PHP SNACK 2 -->
+
+    <h2> PHP Snack 2 - Passare parametri con GET(name, mail, age)</h2>
+    <?php
+        $name = $_GET['name'];
+        $mail = $_GET['mail'];
+        $age = $_GET['age'];
+
+        if(empty($name) || empty($mail) || empty($age) ) {
+            echo 'Please enter the parameters';
+        } elseif ( strlen($name) >= 3 && strpos($mail, '@') && strpos($mail, '.') && ctype_digit($age)) {
+            echo 'Accesso riuscito!';
+        } else {
+            echo 'Accesso negato!';
+        }
+    ?>
 </body>
 </html>
